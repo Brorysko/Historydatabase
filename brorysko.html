@@ -1,0 +1,60 @@
+https://www.canva.com/design/DAGXyJ6HWrk/dfpO44fQ5l2TOQ1JysyzIQ/edit?utm_content=DAGXyJ6HWrk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Презентації з Canva</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    iframe {
+      width: 100%;
+      max-width: 960px;
+      height: 540px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+    }
+    .links {
+      margin: 20px 0;
+    }
+    .links a {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 10px 15px;
+      background-color: #00c4cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .links a:hover {
+      background-color: #009fa8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Мої презентації Canva</h1>
+
+  <div class="links">
+    <a href="?slide=1">Презентація 1</a>
+    <a href="?slide=2">Презентація 2</a>
+  </div>
+
+  <iframe id="canvaFrame" src="" allowfullscreen loading="lazy"></iframe>
+
+  <script>
+    const presentations = {
+      1: "https://www.canva.com/design/DAGXyJ6HWrk/dfpO44fQ5l2TOQ1JysyzIQ/view?embed",
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const slide = urlParams.get('slide') || '1';
+    const frame = document.getElementById('canvaFrame');
+    frame.src = presentations[slide] || presentations['1'];
+  </script>
+
+</body>
+</html>
